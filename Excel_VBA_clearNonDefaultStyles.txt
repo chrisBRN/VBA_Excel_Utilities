@@ -13,6 +13,10 @@ Sub RemoveStyles()
 ' For workbooks with a lot of style the below can take quite a while to finish and may appear to crash or hang.
 ' If you do experience 'hanging' closing the workbook and re-opening should fix the issue (with a part way style clearance completed).
 
+'   //Turning off calculation & screen updating can increase macro speed
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
+
 Dim customStyle As Style
 
     On Error Resume Next
@@ -25,5 +29,9 @@ Dim customStyle As Style
         End If
         
      Next customStyle
+     
+'   //Turning calculation & screen updating back on
+    Application.Calculation = xlSemiautomatic
+    Application.ScreenUpdating = True
      
 End Sub

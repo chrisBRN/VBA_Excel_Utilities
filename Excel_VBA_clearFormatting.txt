@@ -1,0 +1,64 @@
+Sub clearFormatting()
+
+' A simple macro that loops through each sheet in the given workbook clearing cell formatting
+' The below code will leave existing number formatting in place. If you need everything reset "wSheet.Cells.ClearFormats" (see below) will clear everything.
+
+' Whilst the below code shouldn't cause you any issues it is strongly recommended that you create a backup of your work before using it. UNDO WILL NOT WORK.
+' Conditional formats can also be removed using the below, this is commented out by default since it's a lot more work to redo if removed in error.
+
+' Code comments are marked with //, this is to differentate them from useful code that has been commented out, which you can re-enable by removing the ' comment marker.
+
+'   //Turning off calculation & screen updating can increase macro speed
+'   Application.Calculation = xlCalculationManual
+'   Application.ScreenUpdating = False
+
+'   //Updates the default 'normal' formatting for the whole workbook
+
+    With ActiveWorkbook.Styles("Normal").Font
+        .Name = "Calibri"   'this can be changed to any font required
+        .Size = 11          'as can the size
+        .Bold = False
+        .Italic = False
+        .Underline = xlUnderlineStyleNone
+        .Strikethrough = False
+        .Superscript = False
+        .ColorIndex = xlAutomatic
+                
+    End With
+    
+'   //Loops through each sheet and clears the existing formatting,
+'   //Returns formatting to the 'new' default set above.
+
+Dim wSheet As Worksheet 'variable used in the 'For Loop' below
+
+    For Each wSheet In ActiveWorkbook.Worksheets
+    
+'       //If all you need is to clear everything uncomment the below - this will however reset date formats to numbers
+'       wSheet.Cells.ClearFormats
+
+'       //Colour formatting
+        wSheet.Cells.Interior.ColorIndex = xlNone
+        wSheet.Cells.Font.ColorIndex = xlAutomatic
+        
+'       //Border formatting
+        wSheet.Cells.Borders.LineStyle = xlNone
+        wSheet.Cells.Borders.ColorIndex = xlNone
+        
+'       //Hyperlinks and underlines
+        wSheet.Cells.ClearHyperlinks
+        wSheet.Cells.Font.Underline = False
+        
+'       //Cell alignment
+'       wSheet.Cells.VerticalAlignment = xlTop 'reset alignment
+'       wSheet.Cells.HorizontalAlignment = xlLeft 'reset alignment
+                
+'       //Removes all conditional formatting
+'       wSheet.Cells.FormatConditions.Delete 'clear all conditional formating       
+       
+    Next wSheet
+    
+'   //Turning calculation & screen updating back on
+'   Application.Calculation = xlSemiautomatic
+'   Application.ScreenUpdating = True
+
+End Sub

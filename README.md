@@ -14,3 +14,7 @@ Non default styles can propagate through a workbook when there is a lot of copy/
 ### clearConditionalFormatting - plug & play macro that deletes all conditional formatting
 
 Whilst conditional formats are a real time saver, they also tend to self-propagate when users copy data from one workbook to another (inadvertently copying the hidden conditional formatting as well), this can cause unexpected behaviour and contribute to workbook slowing down or its size increasing. 
+
+### speedUp - pre and post code functions that will generaly speed up a macro
+
+Turns off various excel features, such as screen updating and calculation to improve macro speed.

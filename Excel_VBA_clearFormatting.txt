@@ -1,12 +1,15 @@
 Sub clearFormatting()
 
-' A simple macro that loops through each sheet in the given workbook clearing cell formatting
-' The below code will leave existing number formatting in place. If you need everything reset "wSheet.Cells.ClearFormats" (see below) will clear everything.
+' ***********************************************************************************
+' It is strongly recommended that you create a backup of your work before using this.
+' ***********************************************************************************
 
-' Whilst the below code shouldn't cause you any issues it is strongly recommended that you create a backup of your work before using it. UNDO WILL NOT WORK.
-' Conditional formats can also be removed using the below, this is commented out by default since it's a lot more work to redo if removed in error.
+' A simple macro that loops through each sheet in the given workbook clearing cell formatting (excluding number formats)
+' If you need everything reset "wSheet.Cells.ClearFormats" (see below) will clear everything.
 
-' Code comments are marked with //, this is to differentate them from useful code that has been commented out, which you can re-enable by removing the ' comment marker.
+' Conditional formatting can also be removed using the below, this is commented out by default
+
+' Non code comments are marked with //
 
 '   //Turning off calculation & screen updating can increase macro speed
 '   Application.Calculation = xlCalculationManual

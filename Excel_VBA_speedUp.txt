@@ -1,0 +1,22 @@
+Sub speedUp()
+
+' The below functions alter Excels default behaviour, this will generally increase the overall macro speed
+
+'   Turning features off
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
+    Application.DisplayStatusBar = False
+    Application.EnableEvents = False
+
+'   your code here
+'   your code here
+'   your code here
+'   your code here
+
+'   Turning features back on
+    Application.Calculation = xlSemiautomatic
+    Application.ScreenUpdating = True
+    Application.DisplayStatusBar = True
+    Application.EnableEvents = True
+
+End Sub

@@ -2,6 +2,8 @@ Sub speedUp()
 
 ' The below functions alters the default behaviour in Excel. Generally speaking this should increase overall macro speed
 
+' if any of these features are needed within the code it is better to temporarily turn on the needed feature and turn it off again once it is no longer needed.  
+
 '   Turning features off
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False

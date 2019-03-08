@@ -5,7 +5,7 @@ A series of small utility functions/macros that can be used to speed up tedious 
 
 Straightforward macro that loops through all sheets in a workbook removing cell formatting (colour, border, etc), leaves existing number format in place to avoid clearing date formats to numbers.
 
-Macro contains options to adjust to remove conditional formatting & change cell alignment (commented out by default).
+Macro contains options to adjust/remove conditional formatting & change cell alignment (commented out by default).
 
 ### clearNonDefaultStyles - plug & play macro that deletes all non-default styles. 
 

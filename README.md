@@ -1,5 +1,6 @@
 # VBA_Excel_Utilities
-A series of small utility functions/macros that can be used to speed up tedious tasks.
+A series of small utility functions/macros that can be used to speed up tedious tasks. 
+Provided as .txt files for easy "plug & play" use.
 
 ### clearFormatting - plug & play macro that clears cell formatting in a given workbook 
 

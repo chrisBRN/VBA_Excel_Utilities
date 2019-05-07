@@ -1,21 +1,19 @@
 Sub RemoveStyles()
 
-' ***********************************************************************************
-' It is strongly recommended that you create a backup of your work before using this.
-' ***********************************************************************************
-
 ' Non-default styles can propagate when there is a lot of copying between workbooks.
 ' Individually there isn't much of an impact to this, however over time a workbook can accumulate hundreds of styles
 ' This invariably leads to a slow down (and file size increase).
 
 ' The below removes all such non-default styles eliminating one cause of a slow workbook.
 
-' For workbooks with a lot of style the below can take quite a while to finish and may appear to crash or hang.
+' For workbooks with a lot of styles the below can take quite a while to finish and may appear to crash or hang.
 ' If you do experience 'hanging' closing the workbook and re-opening should fix the issue (with a part way style clearance completed).
 
-'   //Turning off calculation & screen updating can increase macro speed
+'   Turning off calculation & screen updating can increase macro speed
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False
+    Application.DisplayStatusBar = False
+    Application.EnableEvents = False
 
 Dim customStyle As Style
 
@@ -33,5 +31,7 @@ Dim customStyle As Style
 '   //Turning calculation & screen updating back on
     Application.Calculation = xlSemiautomatic
     Application.ScreenUpdating = True
+    Application.DisplayStatusBar = True
+    Application.EnableEvents = True
      
 End Sub

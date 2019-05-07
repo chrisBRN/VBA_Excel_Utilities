@@ -16,6 +16,12 @@ Non default styles can propagate through a workbook when there is a lot of copy/
 
 Whilst conditional formats are a real time saver, they also tend to self-propagate when users copy data from one workbook to another (inadvertently copying the hidden conditional formatting as well), this can cause unexpected behaviour and contribute to workbook file size increases.  
 
-### speed_up - pre and post code subroutines that will generally speed up any macro
+### speed_up - Pre and post code subroutines that will generally speed up any macro
 Turns off various excel features, such as screen updating and calculation to improve macro speed.
 Also includes a separate subroutine with a boolean argument toggle to control these features with one line of code.
+
+### delete_named_ranges - Loops through a workbook and deletes all named ranges. 
+Named ranges often build up in the background during day to day usage, this is made worst when using temporary formula/sheets to calculate results that are then hardcoded. This can over time increase file size and reduce overall performance deleting these ranges where they are not needed should improve performance.
+
+### delete_connections - Loops through a workbook and deletes all data-connections. 
+When importing files into excel (typically .csv) a connections is created, over time these can increase file size and slow performance.

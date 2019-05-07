@@ -7,18 +7,12 @@ Sub clearConditionalFormatting()
 ' Deleting conditional formats in this way cannot be un-done
 ' ***********************************************************************************
 
-'   Turning off calculation & screen updating can increase macro speed
-    Application.Calculation = xlCalculationManual
-    Application.ScreenUpdating = False
-
 Dim wSheet As Worksheet
     
     For Each wSheet In ActiveWorkbook.Worksheets
+    
         wSheet.Cells.FormatConditions.Delete
+        
     Next wSheet
     
-'   Turning calculation & screen updating back on
-    Application.Calculation = xlSemiautomatic
-    Application.ScreenUpdating = True
-
 End Sub

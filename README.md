@@ -1,4 +1,4 @@
-# VBA_Excel_Utilities
+# VBA Excel Utilities
 A series of small utility functions/subroutines that can be used to speed up tedious tasks, and improve workbook speed/size. 
 Provided as .txt & .bas files 
 

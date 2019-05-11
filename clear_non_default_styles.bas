@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "clear_non_default_styles"
 Sub clear_non_default_styles()
 
 ' Non-default styles can propagate when there is a lot of copying between workbooks.

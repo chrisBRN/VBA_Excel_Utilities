@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "simple_profiler"
 Sub simple_profiler()
 
 ' A not very accurate function to time the duration of a piece of code, useful for quick comparisons

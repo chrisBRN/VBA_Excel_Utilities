@@ -1,16 +1,16 @@
-Attribute VB_Name = "Module1"
-Sub delete_names()
+Attribute VB_Name = "delete_named_ranges"
+Sub delete_named_ranges()
 
-' Removes named ranges (reduces file size and improves performance)
+    ' Removes named ranges (reduces file size and improves performance)
 
-Dim i As Long
+    Dim i As Long
 
     On Error Resume Next
-    
+
     For i = ThisWorkbook.Names.Count To 1 Step -1
-    
+
         ThisWorkbook.Names(i).Delete
-        
+
     Next
-    
+
 End Sub

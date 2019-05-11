@@ -1,4 +1,4 @@
-Sub clearFormatting()
+Sub clear_wb_formatting()
 
 '   A simple macro that loops through each sheet in the given workbook clearing cell formatting (excluding number formats).
 

@@ -1,22 +1,22 @@
-Attribute VB_Name = "Module1"
-Sub speedUp()
+Attribute VB_Name = "speed_up"
+Sub speed_up()
 
-' The below functions alters the default behaviour in Excel. Generally speaking this should increase overall macro speed.
+    ' The below functions alters the default behaviour in Excel. Generally speaking this should increase overall macro speed.
 
-' if any of these features are needed within the code it is better to temporarily turn on the needed feature and turn it off again once it is no longer needed.
+    ' if any of these features are needed within the code it is better to temporarily turn on the needed feature and turn it off again once it is no longer needed.
 
-'   Turning features off
+    '   Turning features off
     Application.Calculation = xlCalculationManual
     Application.ScreenUpdating = False
     Application.DisplayStatusBar = False
     Application.EnableEvents = False
 
-'   your code here
-'   your code here
-'   your code here
-'   your code here
+    '   your code here
+    '   your code here
+    '   your code here
+    '   your code here
 
-'   Turning features back on
+    '   Turning features back on
     Application.Calculation = xlSemiautomatic
     Application.ScreenUpdating = True
     Application.DisplayStatusBar = True

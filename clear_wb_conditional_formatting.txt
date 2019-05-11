@@ -1,4 +1,4 @@
-Sub clearConditionalFormatting()
+Sub clear_wb_conditional_formatting()
 
 '   A simple macro that deletes all conditional formatting in a given workbook
 

@@ -1,4 +1,4 @@
-Sub speedUp()
+Sub speed_up()
 
 ' The below functions alters the default behaviour in Excel. Generally speaking this should increase overall macro speed.
 

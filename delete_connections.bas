@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "delete_connections"
 Sub delete_connections()
 
 ' Removes data-connections i.e. references to inserted txt files (reduces file size and improves performance)

@@ -25,3 +25,6 @@ Named ranges often build up in the background during day to day usage, this is m
 
 ### delete_connections - Loops through a workbook and deletes all data-connections. 
 When importing files into excel (typically .csv) a connections is created, over time these can increase file size and slow performance.
+
+### simple_profiler - Provides a very simple timer
+Useful for quick sense-check timings but not accurate enough for detailed analysis, can be used to hone in on problem areas of code that need refactoring/rewriting. 

@@ -1,4 +1,4 @@
-Sub RemoveStyles()
+Sub clear_non_default_styles()
 
 '   Non-default styles can propagate when there is a lot of copying between workbooks.
 '   Individually there isn't much of an impact to this, however over time a workbook can accumulate hundreds of styles

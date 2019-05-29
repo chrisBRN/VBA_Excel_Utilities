@@ -1,7 +1,7 @@
 Attribute VB_Name = "factorial"
 Sub test()
 
-factorial_test (10000000)
+factorial_calculator (10000000)
 
 End Sub
 

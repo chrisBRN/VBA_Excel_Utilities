@@ -19,7 +19,7 @@ When importing files into excel (typically .csv) a connections is created, over 
 ### delete_named_ranges - Loops through a workbook and deletes all named ranges. 
 Named ranges often build up in the background during day to day usage, this is made worst when using temporary formula/sheets to calculate results that are then hardcoded. This can over time increase file size and reduce overall performance deleting these ranges where they are not needed should improve performance.
 
-### display_window_features - Toggles window features (Formula Bar, Scroll Bar, Status Bar & Ribbon
+### display_window_features - Toggles features (Formula Bar, Scroll Bar, Status Bar & Ribbon)
 Useful if you need to prevent a user tinkering with the way a workbook is displayed/operates
 
 ### speed_up - Pre and post code subroutines that will generally speed up any macro

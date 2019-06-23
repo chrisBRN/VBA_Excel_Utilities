@@ -33,14 +33,9 @@ Sub slow_feature_toggle(on_or_off As Boolean)
     Application.ScreenUpdating = on_or_off
     Application.DisplayStatusBar = on_or_off
     Application.EnableEvents = on_or_off
-        
+
 '   Calc mode needs to be controlled via an if statement here as the default argument is not a boolean one. If you are looking for micro performance gains then
 '   it is probably better to add a simple one liner to control the calc mode to avoid the branching here.
-        
-    If on_or_off = True Then
-        Application.Calculation = xlSemiautomatic
-    Else
-        Application.Calculation = xlCalculationManual
-    End If
+    Application.Calculation = IIf(on_or_off, xlSemiautomatic, xlCalculationManual)
         
 End Sub
